@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perplexity-to-vane"
+version = "0.1.0"
+description = "Import Perplexity.ai conversation exports into Vane (formerly Perplexica) SQLite database"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Craig McIntosh", email = "craig@craigmcintosh.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.scripts]
+pplx2vane = "perplexity_to_vane.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
